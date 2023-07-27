@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document ss</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+
+    <div class="w-75 mx-auto">
+      <h2 class="mb-5">Product Management System</h2>
+
+      <label for="ProductNameInput">Product Name :</label>
+      <input type="text" oninput="validation();" id="ProductNameInput" class="form-control mb-2" />
+
+      <label for="ProductPriceInput">Product price :</label>
+      <input type="number" id="ProductPriceInput" class="form-control mb-2" />
+
+      <label for="ProductCategoryInput">Product Category :</label>
+      <input type="text" id="ProductCategoryInput" class="form-control mb-2" />
+
+      <label for="ProductDescInput">Product Desc :</label>
+      <textarea
+        id="ProductDescInput"
+        class="form-control mb-4"
+        cols="30"
+        rows="3"
+      ></textarea>
+
+      <button id="add" onclick="addProdut();" class="btn btn-outline-info">add</button>
+      <button id="update" onclick="update();" class="btn btn-outline-warning d-none">update</button>
+
+    </div>
+    <div class="w-75 mx-auto p-5">
+      <label for="search">search :</label>
+      <input oninput="searchProduct(this.value)" type="text" id="search" class="form-control" />
+    </div>
+    <table class="table w-75 mx-auto">
+      <thead>
+        <th>index</th>
+        <th>product name</th>
+        <th>product price</th>
+        <th>product category</th>
+        <th>product desc</th>
+        <th>update</th>
+        <th>delete</th>
+      </thead>
+      <tbody id="demo"></tbody>
+    </table>
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
